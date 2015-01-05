@@ -4,16 +4,16 @@
 	<div class="row">
 		{{ Form::model(Session::get('user'), array('route' => 'add', 'method' => 'post', 'id' => 'frm-submit-post')) }}
 			<div class="col-md-7">
-				<img src="img/img_data.png" alt="Completa tus datos" class="mb20">
+				<img src="img/img_data.png" alt="Completa tus datos" class="mb20 img-responsive">
 				<div class="mt20">
 					<div class="col-md-4">
-						<img src="img/entradas_dobles.png" alt="Entradas dobles al cine">
+						<img src="img/entradas_dobles.png" alt="Entradas dobles al cine" class="img-responsive">
 					</div>
 					<div class="col-md-4">
-						<img src="img/tablet_advance.png" alt="Tablet Advance">
+						<img src="img/tablet_advance.png" alt="Tablet Advance" class="img-responsive">
 					</div>
 					<div class="col-md-4">
-						<img src="img/becas.png" alt="Becas Privatecher Online">
+						<img src="img/becas.png" alt="Becas Privatecher Online" class="img-responsive">
 					</div>
 					<div class="clearfix"></div>
 				</div>

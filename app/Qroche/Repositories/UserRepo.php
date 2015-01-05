@@ -22,9 +22,9 @@ class UserRepo extends BaseRepo
 		return array('load' => true, 'data' => $user->getAttributes());
 	}
 
-	public function getPosts($value)
+	public function getPosts()
 	{
-		return User::where('estado', 'A')->get(array('alias', 'post', 'created_at'));
+		return User::where('estado', 'A')->where('post', '!=', '')->take(4)->orderBy('id', 'desc')->get(array('alias', 'post', 'created_at'));
 	}
 
 	public function addPost($values)

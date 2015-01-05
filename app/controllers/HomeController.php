@@ -24,7 +24,14 @@ class HomeController extends BaseController {
 	public function postRoche()
 	{
 		$this->checkSession();
-		return View::make('post');
+		$posts = $this->userRepo->getPosts();
+		return View::make('post', compact('posts'));
+	}
+
+	public function thanks()
+	{
+		$this->checkSession();
+		return View::make('thanks');
 	}
 
 	public function tagFriends()

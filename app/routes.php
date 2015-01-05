@@ -15,5 +15,7 @@ Route::get('/', array('as' => 'home', 'uses' => 'HomeController@showWelcome'));
 Route::get('register', 'HomeController@register');
 Route::get('post-roche', 'HomeController@postRoche');
 Route::get('tag-friends', 'HomeController@tagFriends');
+Route::get('thanks', 'HomeController@thanks');
+
 Route::post('addUser', array('as' => 'add', 'uses' => 'HomeController@add'));
 Route::put('add-post', array('as' => 'addpost', 'uses' => 'HomeController@addPost'));
