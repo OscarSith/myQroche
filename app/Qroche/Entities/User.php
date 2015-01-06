@@ -39,8 +39,9 @@ class User extends \Eloquent {
 			'genero' => 'required',
 			'nacimiento' => 'date',
 			'email' => 'required|email',
-			'telefono' => 'required',
-			'celular' => 'required'
+			'telefono' => 'sometimes',
+			'celular' => 'required',
+			'terminos' => 'accepted'
 		);
 	}
 }

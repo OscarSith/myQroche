@@ -3,14 +3,26 @@
 @section('content')
 	<div class="row">
 		<div class="col-md-12 text-center">
+			<p class="hidden">Esta es la descripción que irá en la imagen que saldrá en Facebook</p>
 			<img src="img/obten_mas_opciones.png" alt="Texto del titulo">
 			<img src="img/img_tag_title.png" alt="Subtitulo de etiquetado de amigos">
-			<div id="fb-login">
-				
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="text-left col-sm-6">
+					<div id="fb-select-friends">
+						
+					</div>
+					<div class="alert alert-warning alert-dismissible hidden" id="alert">
+						<button type="button" class="close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<span></span>
+					</div>
+				</div>
+				<div class="col-sm-3"></div>
 			</div>
 			<div class="row">
-				<!-- id="fb-login-app" -->
-				<a href="thanks" class="btn-begin">INVITAR</a>
+				<a href="#" id="fb-login-app" class="btn-begin">CONECTAR CON FB</a>
 				<div class="mb20 mt10">
 					<a href="#" class="btn btn-sm btn-black">Premios</a>
 					&nbsp;&nbsp;

@@ -27,8 +27,7 @@
 		</div>
 		<div class="col-md-3">
 			<img src="img/img_final.png" alt="Mujer que roche" class="mt20 img-responsive" id="img_compartir">
-			<div class="text-center" id="content-btn-finish">
-				<a href="register" class="btn-begin">COMPARTIR</a>
+			<div class="text-center">
 				<div class="mb20 mt10">
 					<a href="#" class="btn btn-sm btn-black">Premios</a>
 					&nbsp;&nbsp;

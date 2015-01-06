@@ -67,7 +67,7 @@
 					</div>
 					<div class="form-group row">
 						<div class="col-md-6">
-							{{ Form::text('telefono', null, array('class' => 'form-control', 'placeholder' => 'Teléfono', 'required')) }}
+							{{ Form::text('telefono', null, array('class' => 'form-control', 'placeholder' => 'Teléfono')) }}
 						</div>
 						<div class="col-md-6">
 							{{ Form::text('celular', null, array('class' => 'form-control', 'placeholder' => 'Celular', 'required')) }}
