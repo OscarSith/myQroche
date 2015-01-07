@@ -34,7 +34,7 @@ require([
 			if (resp.status === 'connected') {
 				friends($btn);
 			}
-		}, {scope: 'publish_actions,manage_friendlists'});
+		}, {scope: 'publish_actions,user_friends,manage_friendlists'});
 	}
 
 	function friends($btn) {
@@ -71,7 +71,7 @@ require([
 					publicar();
 				});
 			} else {
-				alert('Something goes wrong', response);
+				alert('Something goes wrong: ' +response.message);
 			}
 		});
 	}
