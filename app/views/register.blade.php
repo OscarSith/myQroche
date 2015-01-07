@@ -59,7 +59,7 @@
 					<div class="form-group row">
 						{{ Form::label('nacimiento', 'Fecha de nacimiento', array('class' => 'col-md-6 control-label')) }}
 						<div class="col-md-6">
-							{{ Form::text('nacimiento', null, array('class' => 'form-control')) }}
+							{{ Form::text('nacimiento', '1990-06-17', array('class' => 'form-control')) }}
 						</div>
 					</div>
 					<div class="form-group">
