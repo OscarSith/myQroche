@@ -71,8 +71,7 @@ require([
 					publicar();
 				});
 			} else {
-				console.info(response);
-				alert('Something goes wrong: ');
+				alert(response.error.message +"\nEsta app no tiene permisos para usar el etiquetado, se necesita las politicas de privacidad de esta App, para poder revisar y autorizar el etiquetado.");
 			}
 		});
 	}
