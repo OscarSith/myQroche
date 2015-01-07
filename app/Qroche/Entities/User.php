@@ -32,13 +32,13 @@ class User extends \Eloquent {
 
 	public function getRules() {
 		return array(
-			'dni' => 'required|digits:8',
+			'dni' => 'required|digits:8|unique:users,dni',
 			'nombre' => 'required',
 			'apellido' => 'required',
-			'alias' => 'required',
+			'alias' => 'required|unique:users,alias',
 			'genero' => 'required',
 			'nacimiento' => 'date',
-			'email' => 'required|email',
+			'email' => 'required|email|unique:users,email',
 			'telefono' => 'sometimes',
 			'celular' => 'required',
 			'terminos' => 'accepted'

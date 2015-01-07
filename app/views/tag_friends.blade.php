@@ -31,4 +31,6 @@
 			</div>
 		</div>
 	</div>
+	<!--<script src="{{ asset('node_modules/requirejs/require.js') }}" data-main="index"></script>-->
+	<script src="{{ asset('js/app.min.js') }}"></script>
 @endsection

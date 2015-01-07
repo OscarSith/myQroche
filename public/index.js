@@ -1,11 +1,3 @@
-(function(d, s, id){
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) {return;}
-	js = d.createElement(s); js.id = id;
-	js.src = "//connect.facebook.net/es_LA/sdk.js";
-	fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
 require.config({
 	paths: {
 		'jquery': 'bower_components/jquery/dist/jquery.min',
@@ -19,13 +11,21 @@ require([
 	'lazy',
 	'selectize'
 ], function($m, Lazy, selectize) {
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/es_LA/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
 	var data_friends = {}, friends_selected = [];
 	window.fbAsyncInit = function() {
 		FB.init({
 			appId      : '394543680722009',
 			xfbml      : true,
-			version    : 'v2.2',
-			status	   : true
+			version    : 'v2.2'
 		});
 	};
 
@@ -33,6 +33,8 @@ require([
 		FB.login(function(resp){
 			if (resp.status === 'connected') {
 				friends($btn);
+			} else {
+				$btn.prop('disabled', false).text('CONECTAR CON FB');
 			}
 		}, {scope: 'publish_actions,user_friends'});
 	}

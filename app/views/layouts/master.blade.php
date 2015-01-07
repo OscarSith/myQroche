@@ -21,7 +21,5 @@
 	@show
 	@yield('content')
 	</div>
-	<!--<script src="{{ asset('../node_modules/requirejs/require.js') }}" data-main="js/index"></script>-->
-	<script src="{{ asset('js/app.min.js') }}"></script>
 </body>
 </html>

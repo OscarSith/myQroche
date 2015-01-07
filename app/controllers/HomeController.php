@@ -47,28 +47,7 @@ class HomeController extends BaseController {
 		try {
 			$rpta = $this->userRepo->add($values);
 		} catch (PDOException $ex) {
-			$message = '';
-			if ($ex->getCode() == 23000) {
-				$uniques = array('users_email_unique', 'users_dni_unique', 'users_alias_unique');
-				foreach ($uniques as $key) {
-					if(str_contains($ex->getMessage(), $key)) {
-						switch ($key) {
-							case 'users_dni_unique':
-								$message = trans('utils.unique_dni', array('dni' => $values['dni']));
-								break;
-							case 'users_alias_unique':
-								$message = trans('utils.unique_alias', array('alias' => $values['alias']));
-								break;
-							case 'users_email_unique':
-								$message = trans('utils.unique_email', array('email' => $values['email']));
-								break;
-						}
-					}
-				}
-			} else {
-				$message = $ex->getMessage();
-			}
-			$rpta = array('load' => false, 'data' => $message);
+			$rpta = array('load' => false, 'data' => $ex->getMessage());
 		}
 
 		if ($rpta['load']) {

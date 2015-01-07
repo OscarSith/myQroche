@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	"accepted"             => "The :attribute must be accepted.",
+	"accepted"             => "Debe aceptar los :attribute.",
 	"active_url"           => "The :attribute is not a valid URL.",
 	"after"                => "The :attribute must be a date after :date.",
 	"alpha"                => "The :attribute may only contain letters.",
@@ -29,7 +29,7 @@ return array(
 	),
 	"boolean"              => "The :attribute field must be true or false.",
 	"confirmed"            => "The :attribute confirmation does not match.",
-	"date"                 => "The :attribute is not a valid date.",
+	"date"                 => "El formato de la fecha de :attribute no es válido.",
 	"date_format"          => "The :attribute does not match the format :format.",
 	"different"            => "The :attribute and :other must be different.",
 	"digits"               => "El :attribute debe tener :digits digitos.",
@@ -69,7 +69,7 @@ return array(
 		"string"  => "The :attribute must be :size characters.",
 		"array"   => "The :attribute must contain :size items.",
 	),
-	"unique"               => "The :attribute has already been taken.",
+	"unique"               => "El :attribute ingresado ya existe.",
 	"url"                  => "The :attribute format is invalid.",
 	"timezone"             => "The :attribute must be a valid zone.",
 

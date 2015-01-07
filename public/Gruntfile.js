@@ -6,8 +6,8 @@ module.exports = function(grunt) {
 					almond: true,
 					baseUrl: '.',
 					out: "js/app.min.js",
-					name: "js/index",
-					mainConfigFile: 'js/index.js',
+					name: "index",
+					mainConfigFile: 'index.js',
 					include: ['node_modules/requirejs/require']
 				}
 			}
@@ -18,7 +18,9 @@ module.exports = function(grunt) {
 					'css/main.css': [
 						'bower_components/normalize.styl/normalize',
 						'bower_components/bootstrap/dist/css/bootstrap.css',
-						'stylus/main.styl'
+						'stylus/main.styl',
+						'bower_components/selectize/dist/css/selectize.default.css',
+						'bower_components/pikaday/css/pikaday.css'
 					]
 				}
 			}
@@ -36,7 +38,11 @@ module.exports = function(grunt) {
 		cssmin: {
 			combine: {
 				dest: 'css/main.css',
-				src: ['css/main.css', 'bower_components/selectize/dist/css/selectize.default.css']
+				src: [
+					'css/main.css',
+					'bower_components/selectize/dist/css/selectize.default.css',
+					'bower_components/pikaday/css/pikaday.css'
+				]
 			}
 		}
 	});
