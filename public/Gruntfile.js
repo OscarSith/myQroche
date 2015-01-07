@@ -49,5 +49,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('cssVigilar', ['watch']);
 	grunt.registerTask('styl', ['stylus']);
 	grunt.registerTask('cssm', ['cssmin']);
+	grunt.registerTask('app', ['requirejs']);
 	grunt.registerTask('runapp', ['cssm', 'requirejs']);
 };
