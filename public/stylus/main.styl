@@ -83,27 +83,21 @@ body
 
 #socials a
 	display inline-block
-	width 84px
-	height 85px
-	background url('../img/socials.png') no-repeat
 	margin-right 16px
 
-#yt
-	background-position -100px 0px !important
-
 .custom-tooltip
-	position absolute
-	padding-right 20px
-	top -18px
-	left 30px
 	background url('../img/arrow_tooltip.png') no-repeat 176px 9px
+	left 30px
+	padding-right 20px
+	position absolute
+	top -18px
 	div
 		background-color #FFF
-		width 180px
 		border-radius 8px
-		padding 6px 12px
 		color #231F20
 		line-height 1.3em
+		padding 6px 12px
+		width 180px
 
 .prelative
 	position relative
@@ -120,25 +114,27 @@ body
 	text-shadow rgba(51, 51, 51, 0.82) 1px 1px 2px
 
 #posts
+	margin-top 24px
 	li
 		overflow hidden
 		margin-bottom 18px
 	p
 		background-color #F0F0F1
 		border-radius 6px
+		cursor pointer
 		font-size .9em
 		margin-bottom 0
 		padding 6px
 		text-align left
 	.post-content
-		min-width 170px
-		max-width 204px
-		display inline-block
-		padding-right 10px
 		background url('../img/arrow_posts.png') no-repeat right 38px
+		display inline-block
+		max-width 204px
+		min-width 170px
+		padding-right 10px
 	img
-		width 68px
 		margin-left 6px
+		width 68px
 
 #content-btn-finish
 	margin-top -18px
@@ -147,13 +143,13 @@ body
 	margin 0 auto
 
 .bg-video
-	position absolute
-	top 16px
-	max-width 270px
-	height 170px
 	background-color #000
+	height 170px
 	left 39px
+	max-width 270px
+	position absolute
 	right 0
+	top 16px
 
 .premios
 	background url('../img/premios.png') no-repeat left center
@@ -170,3 +166,8 @@ body
 
 .mt12
 	margin-top 12px
+
+#modal-show-post .modal-body
+	p
+		max-height 300px
+		overflow auto

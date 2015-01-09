@@ -10,6 +10,16 @@ module.exports = function(grunt) {
 					mainConfigFile: 'index.js',
 					include: ['node_modules/requirejs/require']
 				}
+			},
+			compile_post: {
+				options: {
+					almond: true,
+					baseUrl: '.',
+					out: "js/post.min.js",
+					name: "post_index",
+					mainConfigFile: 'post_index.js',
+					include: ['node_modules/requirejs/require']
+				}
 			}
 		},
 		stylus: {
@@ -55,6 +65,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('cssVigilar', ['watch']);
 	grunt.registerTask('styl', ['stylus']);
 	grunt.registerTask('cssm', ['cssmin']);
-	grunt.registerTask('app', ['requirejs']);
-	grunt.registerTask('runapp', ['cssm', 'requirejs']);
+	grunt.registerTask('app', ['requirejs:compile']);
+	grunt.registerTask('postapp', ['requirejs:compile_post']);
+	grunt.registerTask('runapp', ['cssm', 'requirejs:compile']);
 };

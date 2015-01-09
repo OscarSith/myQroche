@@ -23,20 +23,27 @@ class HomeController extends BaseController {
 
 	public function postRoche()
 	{
-		$this->checkSession();
+		if(!$this->checkSession()) {
+			return Redirect::route('home');
+		}
+
 		$posts = $this->userRepo->getPosts();
 		return View::make('post', compact('posts'));
 	}
 
 	public function thanks()
 	{
-		$this->checkSession();
+		if(!$this->checkSession()) {
+			return Redirect::route('home');
+		}
 		return View::make('thanks');
 	}
 
 	public function tagFriends()
 	{
-		$this->checkSession();
+		if(!$this->checkSession()) {
+			return Redirect::route('home');
+		}
 		return View::make('tag_friends');
 	}
 
@@ -61,7 +68,9 @@ class HomeController extends BaseController {
 
 	public function addPost()
 	{
-		$this->checkSession();
+		if(!$this->checkSession()) {
+			return Redirect::route('home');
+		}
 
 		Input::merge(array('id' => Session::get('user.id')));
 		$rpta = $this->userRepo->addPost(Input::all());
@@ -72,10 +81,18 @@ class HomeController extends BaseController {
 		}
 	}
 
+	public function showPost($id)
+	{
+		$data = $this->userRepo->showPost($id);
+		if ($data != null) {
+			return $data->toJson();
+		} else {
+			return Response::json(array('load' => false, 'message' => 'No hay registro que mostrar'));
+		}
+	}
+
 	public function checkSession()
 	{
-		if (!Session::has('user')) {
-			return Redirect::to('home');
-		}
+		return Session::has('user');
 	}
 }

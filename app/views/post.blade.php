@@ -33,13 +33,33 @@
 					<li class="text-right">
 						<div class="post-content">
 							<b><small>{{ $rec->alias}}</small></b>
-							<p>{{ str_limit($rec->post, '54', '...') }}</p>
+							<p data-id="{{ $rec->id }}">{{ str_limit($rec->post, '54', '...') }}</p>
 						</div>
-						<img src="#" alt="" class="push-right">
+						<img src="img/avatars/{{ $rec->genero }}_{{ $rec->genero === 'M' ? rand(1,3) : 1 }}.jpg" alt="Avatar" class="push-right">
 					</li>
 				@endforeach
 				</ul>
 			@endif
 		</div>
 	</div>
+	<div class="modal fade" id="modal-show-post">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Historia de <span></span></h4>
+				</div>
+				<div class="modal-body">
+					<p></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--<script src="{{ asset('node_modules/requirejs/require.js') }}" data-main="post_index"></script>-->
+	<script src="js/post.min.js"></script>
 @endsection

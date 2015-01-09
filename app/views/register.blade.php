@@ -6,7 +6,7 @@ $date = new DateTime();
 $date->sub(new DateInterval('P7Y'));
 ?>
 	<div class="row">
-		{{ Form::model(Session::get('user'), array('route' => 'add', 'method' => 'post', 'id' => 'frm-submit-post', 'novalidate')) }}
+		{{ Form::model(Session::get('user'), array('route' => 'add', 'method' => 'post', 'id' => 'frm-submit-post')) }}
 			<div class="col-md-7">
 				<img src="img/img_data.png" alt="Completa tus datos" class="mb20 img-responsive">
 				<div class="mt20">
@@ -131,7 +131,8 @@ $date->sub(new DateInterval('P7Y'));
 			showMonthAfterYear: true,
 			yearRange: 50,
 			i18n: {
-				months		  : ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+				months		  : ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto',
+								'Septiembre','Octubre','Noviembre','Diciembre'],
 				weekdays	  : ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'],
 				weekdaysShort : ['Dom','Lun','Mar','Mie','Jue','Vie','Sab']
 			}

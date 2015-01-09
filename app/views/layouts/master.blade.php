@@ -13,8 +13,8 @@
 		<header>
 			<img src="img/logo.png" alt="Logo Privateacher" class="push-left">
 			<div class="push-right" id="socials">
-				<a href="#"></a>
-				<a href="#" id="yt"></a>
+				<a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+				<a href="#"><img src="img/youtube.png" alt="Youtube"></a>
 			</div>
 			<div class="clearfix"></div>
 		</header>

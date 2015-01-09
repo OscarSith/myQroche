@@ -19,3 +19,4 @@ Route::get('thanks', 'HomeController@thanks');
 
 Route::post('addUser', array('as' => 'add', 'uses' => 'HomeController@add'));
 Route::put('add-post', array('as' => 'addpost', 'uses' => 'HomeController@addPost'));
+Route::get('show-history-post-{id}', 'HomeController@showPost');
