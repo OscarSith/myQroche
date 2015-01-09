@@ -119,6 +119,9 @@ $date->sub(new DateInterval('P7Y'));
 							</span>
 						@endif
 					</label>
+					@if($errors->has('sql_error'))
+						<script>alert("{{ $errors->first('sql_error') }}");</script>
+					@endif
 				</div>
 			</div>
 		{{ Form::close() }}

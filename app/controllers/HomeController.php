@@ -54,7 +54,7 @@ class HomeController extends BaseController {
 		try {
 			$rpta = $this->userRepo->add($values);
 		} catch (PDOException $ex) {
-			$rpta = array('load' => false, 'data' => $ex->getMessage());
+			$rpta = array('load' => false, 'data' => array('sql_error' => $ex->getMessage()));
 		}
 
 		if ($rpta['load']) {
