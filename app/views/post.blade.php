@@ -35,7 +35,7 @@
 							<b><small>{{ $rec->alias}}</small></b>
 							<p data-id="{{ $rec->id }}">{{ str_limit($rec->post, '54', '...') }}</p>
 						</div>
-						<img src="img/avatars/{{ $rec->genero }}_{{ $rec->genero === 'M' ? rand(1,3) : 1 }}.jpg" alt="Avatar" class="push-right">
+						<img src="img/avatars/{{ $rec->genero }}_{{ $rec->genero === 'm' ? rand(1,3) : 1 }}.jpg" alt="Avatar" class="push-right">
 					</li>
 				@endforeach
 				</ul>

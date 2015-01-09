@@ -66,10 +66,10 @@ $date->sub(new DateInterval('P7Y'));
 					<div class="form-group row mb20 mt20">
 						<label class="col-md-3">Género</label>
 						<label class="col-md-3 wp">
-							{{ Form::radio('genero', 'M') }} Masculino
+							{{ Form::radio('genero', 'm') }} Masculino
 						</label>
 						<label class="col-md-3 wp">
-							{{ Form::radio('genero', 'F') }} Femenino
+							{{ Form::radio('genero', 'f') }} Femenino
 						</label>
 						@if($errors->has('genero'))
 							<div class="col-xs-12">
