@@ -24,7 +24,7 @@ class UserRepo extends BaseRepo
 
 	public function getPosts()
 	{
-		return User::where('estado', 'A')->where('post', '!=', '')->take(4)->orderBy('id', 'desc')->get(array('id', 'alias', 'genero', 'post', 'created_at'));
+		return User::where('estado', 'A')->where('post', '!=', '')->orderBy('id', 'desc')->simplePaginate(4, array('id', 'alias', 'genero', 'post', 'created_at'));
 	}
 
 	public function addPost($values)
