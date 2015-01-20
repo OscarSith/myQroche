@@ -28,7 +28,19 @@ class HomeController extends BaseController {
 		}
 
 		$posts = $this->userRepo->getPosts();
+		$posts->setBaseUrl('http://'.$_SERVER['HTTP_HOST'].'/paginate-post-roche');
 		return View::make('post', compact('posts'));
+	}
+
+	public function paginatePosts()
+	{
+		$posts = $this->userRepo->getPosts();
+		return Response::json(
+			array(
+				'data' => $posts->jsonSerialize(),
+				'paginator' => $posts->links()->__toString()
+			)
+		);
 	}
 
 	public function thanks()

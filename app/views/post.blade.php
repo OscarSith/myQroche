@@ -39,7 +39,10 @@
 					</li>
 				@endforeach
 				</ul>
-				{{ $posts->links() }}
+				<div id="postsLinks">
+					{{ $posts->links() }}
+				</div>
+				<div id="inline-alert" class="alert alert-block alert-warning hidden">Cargando Posts...</div>
 			@endif
 		</div>
 	</div>
