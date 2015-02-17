@@ -103,6 +103,11 @@ class HomeController extends BaseController {
 		}
 	}
 
+	public function policy()
+	{
+		return View::make('policy');
+	}
+
 	public function checkSession()
 	{
 		return Session::has('user');
