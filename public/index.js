@@ -92,7 +92,7 @@ require([
 			FB.api("/me/feed", "POST", {
 				message: "Este es un mensaje enviado de pruebas desde la web de QRoche",
 				privacy: {value: "SELF"},
-				link: 'http://104.236.180.75:8000',
+				link: 'http://www.inglesrapido.us',
 				description: "Aqui debe ir alguna descripción si es que se desea poner una, tambien podría ir vacio.\nAhora si creo q me irá bien esto.",
 				// caption: 'Este es el caption', //por defecto pone el dominio
 				place: 225798754190938,
