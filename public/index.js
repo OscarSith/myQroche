@@ -99,7 +99,17 @@ require([
 				tags: friends_selected.join(',')
 			}, function(resp) {
 				if (resp.id) {
-					location.href = 'thanks';
+					$.ajax({
+						url: 'change',
+						type: 'put',
+						dataType: 'json'
+					}).done(function(rec) {
+						if (rec.load) {
+							location.href = 'thanks';
+						} else {
+							alert('Ups, sucedió algo inesperado');
+						}
+					});
 				}
 			});
 		} else {

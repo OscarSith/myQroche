@@ -86,7 +86,9 @@ class HomeController extends BaseController {
 
 		Input::merge(array('id' => Session::get('user.id')));
 		$rpta = $this->userRepo->addPost(Input::all());
-		if ($rpta['load']) {
+
+		Session::put('post_id', $rpta);
+		if ($rpta) {
 			return Redirect::to('tag-friends');
 		} else {
 			return Redirect::to('post-roche')->withErrors($rpta['data']);
@@ -101,6 +103,11 @@ class HomeController extends BaseController {
 		} else {
 			return Response::json(array('load' => false, 'message' => 'No hay registro que mostrar'));
 		}
+	}
+
+	public function changeStatus()
+	{
+		return Response::json(['load' => $this->userRepo->changeStatus(Session::get('post_id'))]);
 	}
 
 	public function policy()

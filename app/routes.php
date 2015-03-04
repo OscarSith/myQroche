@@ -21,4 +21,5 @@ Route::get('policy', 'HomeController@policy');
 
 Route::post('addUser', array('as' => 'add', 'uses' => 'HomeController@add'));
 Route::put('add-post', array('as' => 'addpost', 'uses' => 'HomeController@addPost'));
+Route::put('change', 'HomeController@changeStatus');
 Route::get('show-history-post-{id}', 'HomeController@showPost');

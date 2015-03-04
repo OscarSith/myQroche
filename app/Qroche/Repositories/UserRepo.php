@@ -41,11 +41,19 @@ class UserRepo extends BaseRepo
 
 		$user = $this->find($values['id']);
 		$user->post = $values['post'];
-		return array('load' => $user->save());
+		$user->save();
+		return $user->getAttribute('id');
 	}
 
 	public function showPost($id)
 	{
 		return $this->find($id, array('alias', 'post'));
+	}
+
+	public function changeStatus($post_id)
+	{
+		$user = $this->find($post_id);
+		$user->estado = 'A';
+		return $user->save();
 	}
 }
