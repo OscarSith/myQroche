@@ -11,7 +11,7 @@
 				<div class="text-left col-sm-6">
 					<div id="fb-select-friends"></div>
 					<div class="form-group">
-						<textarea id="message" cols="30" rows="10" class="form-control" placeholder="Escriba aquí su mensaje..."></textarea>
+						<textarea id="message" cols="30" rows="10" class="form-control hidden" placeholder="Escriba aquí su mensaje..."></textarea>
 					</div>
 					<div class="alert alert-warning alert-dismissible hidden" id="alert">
 						<button type="button" class="close">
@@ -27,11 +27,10 @@
 				<div class="mb20 mt10">
 					<a href="#" class="btn btn-sm btn-black">Premios</a>
 					&nbsp;&nbsp;
-					<a href="#" class="btn btn-sm btn-black">Condiciones</a>
+					<a href="policy" class="btn btn-sm btn-black">Condiciones</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!--<script src="{{ asset('node_modules/requirejs/require.js') }}" data-main="index"></script>-->
 	<script src="{{ asset('js/app.min.js') }}"></script>
 @endsection

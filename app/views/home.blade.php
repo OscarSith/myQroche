@@ -25,7 +25,7 @@
 				<div class="mb20 mt10">
 					<a href="#" class="btn btn-sm btn-black">Premios</a>
 					&nbsp;&nbsp;
-					<a href="#" class="btn btn-sm btn-black">Condiciones</a>
+					<a href="policy" class="btn btn-sm btn-black">Condiciones</a>
 				</div>
 			</div>
 		</div>

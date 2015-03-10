@@ -54,7 +54,7 @@ require([
 
 				$('#cboFriends').selectize({
 					plugins: ['remove_button'],
-				    maxItems: 2,
+					maxItems: 2,
 					onItemAdd: function(val) {
 						friends_selected.push(val);
 					},
@@ -67,6 +67,7 @@ require([
 						};
 					}
 				});
+				$('#message').removeClass('hidden');
 
 				$('#fb-login-app').off().on('click', function(e) {
 					e.preventDefault();
@@ -87,14 +88,14 @@ require([
 	}
 
 	function publicar() {
-		var $message = $('#message'),
-			$alert = $('#alert');
+		var $alert = $('#alert');
 		if (friends_selected.length !== 2) {
 			$alert.removeClass('hidden').children('span').text('Debe elegir 2 amigos para poder continuar');
 		} else {
 			$('#fb-login-app').prop('disabled', true).text('CARGANDO...')
 			FB.api("/me/feed", "POST", {
-				message: $message.val(),
+				message: $('#message').val(),
+				link: 'http://inglesrapido.us',
 				privacy: {value: "FRIENDS_OF_FRIENDS"},
 				place: 225798754190938,
 				tags: friends_selected.join(',')
