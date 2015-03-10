@@ -87,14 +87,15 @@ require([
 	}
 
 	function publicar() {
-		if (friends_selected.length === 2) {
+		var $message = $('#message'),
+			$alert = $('#alert');
+		if (friends_selected.length !== 2) {
+			$alert.removeClass('hidden').children('span').text('Debe elegir 2 amigos para poder continuar');
+		} else {
 			$('#fb-login-app').prop('disabled', true).text('CARGANDO...')
 			FB.api("/me/feed", "POST", {
-				message: "Este es un mensaje enviado de pruebas desde la web de QRoche",
-				privacy: {value: "SELF"},
-				link: 'http://www.inglesrapido.us',
-				description: "Aqui debe ir alguna descripción si es que se desea poner una, tambien podría ir vacio.\nAhora si creo q me irá bien esto.",
-				// caption: 'Este es el caption', //por defecto pone el dominio
+				message: $message.val(),
+				privacy: {value: "FRIENDS_OF_FRIENDS"},
 				place: 225798754190938,
 				tags: friends_selected.join(',')
 			}, function(resp) {
@@ -112,8 +113,6 @@ require([
 					});
 				}
 			});
-		} else {
-			$('#alert').removeClass('hidden').children('span').text('Debe elegir 2 amigos para poder continuar');
 		}
 	}
 

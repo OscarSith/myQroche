@@ -9,8 +9,9 @@
 			<div class="row">
 				<div class="col-sm-3"></div>
 				<div class="text-left col-sm-6">
-					<div id="fb-select-friends">
-						
+					<div id="fb-select-friends"></div>
+					<div class="form-group">
+						<textarea id="message" cols="30" rows="10" class="form-control" placeholder="Escriba aquí su mensaje..."></textarea>
 					</div>
 					<div class="alert alert-warning alert-dismissible hidden" id="alert">
 						<button type="button" class="close">
