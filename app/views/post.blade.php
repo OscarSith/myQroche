@@ -31,11 +31,13 @@
 				<ul id="posts" class="row list-unstyled">
 				@foreach($posts as $rec)
 					<li class="text-right">
-						<div class="post-content">
+						<div class="post-content col-sm-8">
 							<b><small>{{ $rec->alias}}</small></b>
 							<p data-id="{{ $rec->id }}">{{ str_limit($rec->post, '54', '...') }}</p>
 						</div>
-						<img src="img/avatars/{{ $rec->genero }}_{{ $rec->genero === 'm' ? rand(1,11) : rand(1,17) }}.jpg" alt="Avatar" class="push-right">
+						<div class="col-sm-4">
+							<img src="img/avatars/{{ $rec->genero }}_{{ $rec->genero === 'm' ? rand(1,11) : rand(1,17) }}.jpg" alt="Avatar" class="img-responsive">
+						</div>
 					</li>
 				@endforeach
 				</ul>

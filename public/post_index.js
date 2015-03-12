@@ -47,9 +47,9 @@ require(['jquery', 'bootstrap'], function($) {
 				var li = '';
 				for (var i = 0; i < rec.data.length; i++) {
 					li += '<li class="text-right">'
-							+'<div class="post-content"><b><small>'+rec.data[i].alias+'</small></b>'
+							+'<div class="post-content col-sm-8"><b><small>'+rec.data[i].alias+'</small></b>'
 								+'<p data-id="'+rec.data[i].id+'">'+ rec.data[i].post.substring(0, 54)+'...</p>'
-							+'</div><img src="img/avatars/'+ rec.data[i].genero +'_'+(rec.data[i].genero === 'm' ? Math.floor((Math.random() * 11) + 1) : Math.floor((Math.random() * 17) + 1))+'.jpg" alt="Avatar" class="push-right">'
+							+'</div><div class="col-sm-4"><img src="img/avatars/'+ rec.data[i].genero +'_'+(rec.data[i].genero === 'm' ? Math.floor((Math.random() * 11) + 1) : Math.floor((Math.random() * 17) + 1))+'.jpg" alt="Avatar" class="img-responsive"></div>'
 						+'</li>';
 				}
 
