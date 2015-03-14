@@ -45,9 +45,9 @@ class HomeController extends BaseController {
 
 	public function thanks()
 	{
-		if(!$this->checkSession()) {
-			return Redirect::route('home');
-		}
+		// if(!$this->checkSession()) {
+		// 	return Redirect::route('home');
+		// }
 		return View::make('thanks');
 	}
 
