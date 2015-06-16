@@ -8,7 +8,7 @@ $date->sub(new DateInterval('P7Y'));
 	<div class="row">
 		{{ Form::model(Session::get('user'), array('route' => 'add', 'method' => 'post', 'id' => 'frm-submit-post')) }}
 			<div class="col-md-7">
-				<img src="img/img_data.png" alt="Completa tus datos" class="mb20 img-responsive">
+				<img src="img/img_data.png" alt="Completa tus datos" class="img-responsive" style="margin-top:50px;margin-bottom:55px">
 				<div class="row mt20">
 					<div class="col-md-4">
 						<img src="img/entradas_dobles.png" alt="Entradas dobles al cine" class="img-responsive">
@@ -20,17 +20,6 @@ $date->sub(new DateInterval('P7Y'));
 						<img src="img/becas.png" alt="Becas Privatecher Online" class="img-responsive">
 					</div>
 					<div class="clearfix"></div>
-				</div>
-				<div class="text-center prelative content-tooltip">
-					<div class="custom-tooltip">
-						<div>A un paso de completar tu historia !!!</div>
-					</div>
-					{{ Form::submit('SIGUIENTE', array('class' => 'btn-next')) }}
-					<div class="mb20 mt10">
-						<a href="#" class="btn btn-sm btn-black">Premios</a>
-						&nbsp;&nbsp;
-						<a href="policy" class="btn btn-sm btn-black">Condiciones</a>
-					</div>
 				</div>
 			</div>
 			<div class="col-md-5">
@@ -122,6 +111,17 @@ $date->sub(new DateInterval('P7Y'));
 					@if($errors->has('sql_error'))
 						<script>alert("{{ $errors->first('sql_error') }}");</script>
 					@endif
+				</div>
+				<div class="text-center prelative content-tooltip">
+					<div class="custom-tooltip">
+						<div>A un paso de completar tu historia !!!</div>
+					</div>
+					{{ Form::submit('SIGUIENTE', array('class' => 'btn-next')) }}
+					<div class="mb20 mt10">
+						<a href="#" class="btn btn-sm btn-black">Premios</a>
+						&nbsp;&nbsp;
+						<a href="policy" class="btn btn-sm btn-black">Condiciones</a>
+					</div>
 				</div>
 			</div>
 		{{ Form::close() }}

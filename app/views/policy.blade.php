@@ -53,6 +53,11 @@
 		<li>2 entradas  para las salas Cine Planet</li>
 		<li>Un combo doble de "Pop Corn" y gaseosa.</li>
 	</ul>
+	<br>
+	<hr>
+	<a href="{{ URL::previous() }}" class="btn btn-default btn-lg">Regresar</a>
+	<br>
+	<br>
+	<br>
 </div>
-<div class="col-sm-2 hidden-xs hidden-sm"></div>
 @endsection
