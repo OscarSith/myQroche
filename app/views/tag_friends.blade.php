@@ -23,8 +23,10 @@
 				<div class="col-sm-3"></div>
 			</div>
 			<div class="row">
-				<a href="#" id="fb-login-app" class="btn-begin">CONECTAR CON FB</a>
-				<a href="{{ url('thanks') }}" class="btn btn-sm btn-default" id="btn-saltar-paso">Saltar paso</a>
+				<a href="#" id="fb-login-app" class="btn-begin">INVITAR</a>
+				<div class="text-center">
+					<a href="{{ url('thanks') }}" class="btn" id="btn-saltar-paso">Saltar paso</a>
+				</div>
 				<div class="mb20 mt10">
 					<a href="#" class="btn btn-sm btn-black">Premios</a>
 					&nbsp;&nbsp;
