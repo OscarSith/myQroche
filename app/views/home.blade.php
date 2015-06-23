@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="col-md-8 content-home">
 			<h1>
-				¿Has pasado algún roche
+				Has pasado algún roche
 				<small>por no saber inglés?</small>
 			</h1>
 			<img src="img/img_txt_tell_us.png" alt="img texto" style="margin-top: 40px;margin-bottom:30px">
